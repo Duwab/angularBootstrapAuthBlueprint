@@ -4,11 +4,13 @@ import { CenteredContentLayoutComponent } from './layout/centered-content-layout
 import { CommonModule } from '@angular/common';
 import { Error404PageComponent } from '@theme/pages/error-404/error-404-page.component';
 import { OcticonDirective } from '@theme/directives/octoicon.directive';
+import { ErrorFrontEndPageComponent } from '@theme/pages/error-frontend/error-front-end-page.component';
 
 @NgModule({
   declarations: [
     CenteredContentLayoutComponent,
     SplashScreenComponent,
+    ErrorFrontEndPageComponent,
     Error404PageComponent,
     OcticonDirective
   ],
@@ -19,6 +21,7 @@ import { OcticonDirective } from '@theme/directives/octoicon.directive';
   exports: [
     OcticonDirective,
     SplashScreenComponent,
+    ErrorFrontEndPageComponent,
     CenteredContentLayoutComponent
   ]
 })

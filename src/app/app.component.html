@@ -1,8 +1,13 @@
-<div *ngIf="ready; then thenBlock else elseBlock" class="app-root"></div>
+<div *ngIf="!ready && !navigationError; then splashScreen" class="app-root"></div>
+<div *ngIf="!ready && navigationError; then errorScreen" class="app-root"></div>
+<div *ngIf="ready; then routerOutlet" class="app-root"></div>
 
-<ng-template #thenBlock>
+<ng-template #routerOutlet>
   <router-outlet></router-outlet>
 </ng-template>
-<ng-template #elseBlock>
+<ng-template #errorScreen>
+  <app-theme-front-end-error></app-theme-front-end-error>
+</ng-template>
+<ng-template #splashScreen>
   <app-theme-splash-screen></app-theme-splash-screen>
 </ng-template>
