@@ -9,7 +9,7 @@ export class FakeDelayGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Promise<boolean> {
     return new Promise(resolve => {
-      setTimeout(() => resolve(true), 2000);
+      setTimeout(() => resolve(true), 200);
     });
   }
 }

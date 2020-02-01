@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AuthenticationPage } from './pages/authentication/authentication.page';
+import { AuthenticationPageComponent } from './pages/authentication/authentication-page.component';
 import { AuthRoutingModule } from './auth-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [
-    AuthenticationPage
+    AuthenticationPageComponent
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     AuthRoutingModule
   ],
   providers: [],
