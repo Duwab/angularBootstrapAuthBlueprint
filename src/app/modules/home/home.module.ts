@@ -4,7 +4,7 @@ import { ThemeModule } from '@theme/theme.module';
 import { HomePageComponent } from '@modules/home/pages/home/home-page.component';
 import { HomeRoutingModule } from '@modules/home/home-routing.module';
 import { CommonModule } from '@angular/common';
-
+// import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     CommonModule,
+    // MatIconModule,
     NgbModule,
     ThemeModule,
     HomeRoutingModule

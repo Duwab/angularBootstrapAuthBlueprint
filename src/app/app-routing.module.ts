@@ -17,12 +17,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '',
-    loadChildren: () => import('@modules/auth/auth.module').then(m => m.AuthModule)
-  },
-  {
     path: 'theme',
     children: ThemeRoutes
+  },
+  {
+    path: '',
+    loadChildren: () => import('@modules/auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: '**',
