@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { IntroComponent } from './intro/intro.component';
 import { FakeDelayGuard } from './guards/fakeDelay.guard';
 
-
 const routes: Routes = [{
   path: 'intro',
   canActivate: [FakeDelayGuard],

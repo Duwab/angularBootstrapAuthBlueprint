@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
+let hasBeenDone = false;
+
 @Injectable({
   providedIn: 'root',
 })
@@ -9,7 +11,12 @@ export class FakeDelayGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Promise<boolean> {
     return new Promise(resolve => {
-      setTimeout(() => resolve(true), 1000);
+      if (hasBeenDone) {
+        resolve(true);
+      } else {
+        hasBeenDone = true;
+        setTimeout(() => resolve(true), 1000);
+      }
     });
   }
 }
