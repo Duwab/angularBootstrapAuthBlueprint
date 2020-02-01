@@ -1,20 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SplashScreenComponent } from './components/splash-screen/splash-screen.component';
-import { RouterModule } from '@angular/router';
 import { CenteredContentLayoutComponent } from './layout/centered-content-layout/centered-content-layout.component';
+import { CommonModule } from '@angular/common';
+import { Error404PageComponent } from '@theme/pages/error-404/error-404-page.component';
 
 @NgModule({
   declarations: [
+    CenteredContentLayoutComponent,
     SplashScreenComponent,
-    CenteredContentLayoutComponent
+    Error404PageComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot([{
-      path: 'splash',
-      component: SplashScreenComponent
-    }])
+    CommonModule
   ],
   providers: [],
   exports: [
