@@ -1,25 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AuthenticationPageComponent } from './pages/authentication/authentication-page.component';
-import { AuthRoutingModule } from './auth-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ThemeModule } from '@theme/theme.module';
-import { LoginComponent } from './components/login/login.component';
+import { HomePageComponent } from '@modules/home/pages/home/home-page.component';
+import { HomeRoutingModule } from '@modules/home/home-routing.module';
 
 
 @NgModule({
   declarations: [
-    AuthenticationPageComponent,
-    LoginComponent
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     ThemeModule,
-    AuthRoutingModule
+    HomeRoutingModule
   ],
   providers: [],
   exports: [
   ]
 })
-export class AuthModule { }
+export class HomeModule { }

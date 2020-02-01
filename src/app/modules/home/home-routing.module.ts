@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthenticationPageComponent } from './pages/authentication/authentication-page.component';
 import { FakeDelayGuard } from '@core/guards/fakeDelay.guard';
+import { HomePageComponent } from '@modules/home/pages/home/home-page.component';
 
 
 const routes: Routes = [{
-  path: 'login',
+  path: 'home',
   canActivate: [FakeDelayGuard],
-  component: AuthenticationPageComponent
+  component: HomePageComponent
 }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AuthRoutingModule { }
+export class HomeRoutingModule { }
