@@ -6,12 +6,4 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./authentication-page.component.scss']
 })
 export class AuthenticationPageComponent {
-  constructor(private modalService: NgbModal) {
-  }
-
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-    }, (reason) => {
-    });
-  }
 }
