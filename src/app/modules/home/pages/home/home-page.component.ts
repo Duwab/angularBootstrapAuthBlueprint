@@ -6,6 +6,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
+
+  public isMenuCollapsed = true;
+
   constructor(private modalService: NgbModal) {
   }
 
