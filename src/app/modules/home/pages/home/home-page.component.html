@@ -14,10 +14,7 @@
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">
-              Link
-              <span octicon="gear"></span>
-            </a>
+            <a class="nav-link" href="/">Link</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="/">Disabled</a>
@@ -35,12 +32,18 @@
 <main role="main">
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Album example</h1>
+      <h1 class="jumbotron-heading">Album example <i class="fas fa-camera"></i></h1>
       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc.
         Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
       <p class="cta-list">
-        <button class="btn btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-        <a [routerLink]="'/login'" class="btn btn-primary ">Login</a>
+        <button class="btn btn-outline-primary" (click)="open(content)">
+          Launch demo modal
+          <span octicon="gear"></span>
+        </button>
+        <a [routerLink]="'/login'" class="btn btn-primary">
+          Login
+          <span octicon="sign-in"></span>
+        </a>
         <a [routerLink]="'/theme/splash'" class="btn btn-secondary ">Splash</a>
       </p>
     </div>
